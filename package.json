@@ -1,0 +1,16 @@
+{
+  "name": "fitnessApp",
+  "version": "1.0.0",
+  "description": "Fitness App",
+  "dependencies": {
+    "express": "4.13.4",
+    "mongoose": "4.4.19",
+      "jwt":"0.2.0",
+      "body-parser":"1.15.1",
+      "async":"2.0.0-rc.5",
+      "multer":"1.1.0",
+      "morgan":"1.7.0",
+      "errorhandler":"1.4.3"
+  },
+    "main":"app.js"
+}

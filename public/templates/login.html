@@ -1,0 +1,32 @@
+<div class="content-wrapper" style="margin-left:0px">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1 class="customHeader">
+        Fitness App Admin Panel
+      </h1>
+    </section>
+
+<section class="content cls-login-form">
+      <!-- Small boxes (Stat box) -->
+      <form class="">
+  <fieldset class="form-group ">
+    <label for="formGroupExampleInput">User Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput"  ng-model="myForm.username" placeholder="Enter Email">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Password</label>
+    <input type="password" class="form-control" id="formGroupExampleInput2" ng-model="myForm.adminpsw" placeholder="Enter password">
+  </fieldset>
+          <fieldset class="form-group">
+               <input type="checkbox"   >
+    <label for="formGroupExampleInput2">Remember me</label>
+          </fieldset>
+          
+          <button type="submit" class="btn btn-primary" ng-click="login()">Login</button>
+      
+       <fieldset class="form-group ">
+           <a ui-sref="forgotPassword">forgot Your Password?</a></fieldset>
+
+</form>
+    </section>
+  </div>

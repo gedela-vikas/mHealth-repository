@@ -1,0 +1,41 @@
+<div class="aa">
+<center>
+<h1> Coach List</h1></center>
+  <!--<button type="submit" ng-click="coachprofile()">Coach Profile</button>-->
+<div class="ulsearch">
+<input type ="text" ng-model="search.keyword" placeholder="Search via users" style="width:75%">
+</div>
+<div class="ultable">
+<table style="width:100%" border="1" color:#fff; border-collapse:collapse>
+
+    <th>S. No</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Contact no</th>
+    <th> Age</th>
+    <th> Action</th>
+
+
+	<tbody>
+	<tr ng-repeat = "alluserDetail in alluserDetails | filter:{firstname:search.keyword}" >
+            <td>{{alluserDetail.serialno}}</td>
+			<td>{{alluserDetail.firstname}}</td>
+            <td>{{alluserDetail.lastname}}</td>
+            <td>{{alluserDetail.email}}</td>
+			<td>{{alluserDetail.contact}}</td>
+            <td>{{alluserDetail.age}}</td>
+			<td>
+                <a type="button" class="btn btn-info" ng-href="#/dashBoard/viewCoach/{{alluserDetail._id}}">View</a>
+                
+            <!--    <button type="button" class="btn btn-info" ui-sref="^.editCoach({allDetail:allDetail})">Update</button>-->
+                
+                <button type="button" class="btn btn-info" ui-sref="^.deleteCoach({allDetail:allDetail})">Delete</button></td>
+            <td></td>
+            
+		</tr>
+	</tbody>
+
+</table></div>
+</div>
+

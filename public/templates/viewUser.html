@@ -1,0 +1,59 @@
+<div class="aa">
+<center>
+<h1>View User</h1></center>
+ 
+<div class="ultable">
+<table style="width:100%" border="1" color:#fff; border-collapse:collapse>
+
+    <th>S. No</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Contact no</th>
+    <th> Age</th>
+    <th> Action</th>
+
+
+	<tbody ng-repeat="alluserDetail in alluserDetails">
+		   <td>{{alluserDetail.serialno}}</td>
+			<td>{{alluserDetail.firstname}}</td>
+            <td>{{alluserDetail.lastname}}</td>
+            <td>{{alluserDetail.email}}</td>
+			<td>{{alluserDetail.contact}}</td>
+            <td>{{alluserDetail.age}}</td>
+			<td>
+                
+    <button type="button" class="btn btn-info" ui-sref="^.editUser({alluserDetails:alluserDetail})">Edit</button></td>
+            
+	
+	</tbody>
+</table></div>
+</div>
+
+
+
+
+<!--<table>
+    <tr>
+        <th>Serial No</th>
+			<th>First Name</th>
+            <th>Last Name</th>
+			<th>Email</th>
+            <th>Contact</th>
+			<th>Age</th>
+            <th>Action</th>
+   </tr>
+	<tbody>
+		<tr ng-repeat = "alluserDetail in alluserDetails">
+            <td>{{alluserDetail.serialno}}</td>
+			<td>{{alluserDetail.firstname}}</td>
+            <td>{{alluserDetail.lastname}}</td>
+            <td>{{alluserDetail.email}}</td>
+			<td>{{alluserDetail.contact}}</td>
+            <td>{{alluserDetail.age}}</td>
+            <td><a type="button" class="btn btn-info" ng-href="#/edituser/{{alluserDetail._id}}">EDIT</a></td>
+            
+            <td><button type="button" class="btn btn-info" ui-sref="^.editUser({alluserDetails:alluserDetail})">Edit</button></td>
+        </tr>
+	</tbody>
+</table>-->

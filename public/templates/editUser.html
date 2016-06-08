@@ -1,0 +1,28 @@
+<form name = "UpdateForm" ng-submit= "update()">
+  <p>
+     First Name: 
+      <input type="text" ng-model = "userUpdate.firstname" name = "firstname" required>
+  </p>
+    
+  <p>Last Name: 
+    <input type="text" ng-model = "userUpdate.lastname" name = "lastname" required>
+  </p>
+    
+  <p>
+     Email:
+      <input type="email" ng-model = "userUpdate.email" name = "email" required>
+  </p>
+    
+  <p>
+      Contact:
+    <input type="text" ng-model = "userUpdate.contact" name = "contact" required>
+  </p>
+    
+      <p>
+    Age
+      <input type="text" ng-model = "userUpdate.age" name = "age" required>
+  </p>
+    
+    <button type="submit" value="Update" >Update</button>
+   
+</form>
