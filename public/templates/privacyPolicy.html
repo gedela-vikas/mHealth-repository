@@ -1,13 +1,14 @@
 <div class="aa">
-    <center><h1 class="tc">Privacy Policy</h1>
+    <center><h1 class="tc">Privacy & Policy</h1>
 <br>
-    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-        <br>
-        <br> 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+    <P>
+            {{policies.pp}}
+
 
 </P>
-        
-        <a ui-sref="dashBoard.editprivacyPolicy"><input type="button" value="Edit" style="background-color:white; width:100px; border-radius:5px; color:blue;"></a>
+         <button type="button" class="btn btn-info" ui-sref="^.editprivacyPolicy({policies:policies})">Edit</button>
+       <!-- <a ui-sref="dashBoard.editTerms&Conditions"><input type="button" value="Edit" style="background-color:white; width:100px; border-radius:5px; color:blue;"></a>-->
         </center>
 </div>
+    
+   

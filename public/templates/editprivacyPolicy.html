@@ -1,15 +1,12 @@
 <div class="aa">
-    <center><h1 class="tc">Terms & Conditions</h1>
+    <center><h1 class="tc">Edit Privacy & Policy</h1>
 <br>
-        <textarea style="height:500px; width:75%;">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-        <br>
-        <br> 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-
+        <textarea style="height:500px; width:75%;" ng-model="ppUpdate.pp">
+   
         </textarea><br>
+        <input type="button" value="Save" style="background-color:skyblue; width:100px; border-radius:5px;" ng-click="update(ppUpdate.pp);">
         
-<input type="button" value="Save" style="background-color:blue; width:100px; border-radius:5px;">
-<input type="button" value="Cancel" style="background-color:blue; width:100px; border-radius:5px;">
+        <a ui-sref="dashBoard.privacyPolicy"><input type="button" value="Cancel" style="background-color:skyblue; width:100px; border-radius:5px;"></a>
+        
         </center>
 </div>

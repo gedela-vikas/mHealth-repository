@@ -1,8 +1,8 @@
 angular.module('fitnessApp', ['ui.router'])
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
 
     $urlRouterProvider.otherwise('/login');
-
+    $httpProvider.interceptors.push('httpModifier');
     $stateProvider
     
     .state('login', {
@@ -39,14 +39,13 @@ angular.module('fitnessApp', ['ui.router'])
     .state('dashBoard.editUser', {
             url: '/editUser/:id',
             controller:'editUserCtrl',
-            templateUrl: 'templates/editUser.html' 
+            templateUrl: 'templates/editUser.html',
+        params:{
+        alluserDetails:null
+      }
         
         })
-     .state('dashBoard.deleteUser', {
-            url: '/deleteUser/:id',
-            controller:'deleteUserCtrl',
-            templateUrl: 'templates/deleteUser.html'
-        })
+    
     .state('dashBoard.coachList', {
             url: '/coachList',
            controller:'coachListCtrl',
@@ -60,13 +59,12 @@ angular.module('fitnessApp', ['ui.router'])
       .state('dashBoard.editCoach', {
             url: '/editCoach/:id',
             controller:'editCoachCtrl',
-            templateUrl: 'templates/editCoach.html'
+            templateUrl: 'templates/editCoach.html',
+         params:{
+        alluserDetails:null
+      }
         })
-      .state('dashBoard.deleteCoach', {
-            url: '/deleteCoach/:id',
-            controller:'deleteCoachCtrl',
-            templateUrl: 'templates/deleteCoach.html'
-        })
+     
      .state('dashBoard.appointment', {
             url: '/appointment',
             controller:'appointmentCtrl',
@@ -98,9 +96,12 @@ angular.module('fitnessApp', ['ui.router'])
             templateUrl: 'templates/terms&Conditions.html'
         })
      .state('dashBoard.editTerms&Conditions', {
-            url: '/editTerms&Conditionss',
-            controller:'editTerms&ConditionsCtrl',
-            templateUrl: 'templates/editTerms&Conditions.html'
+            url: '/editTerms&Conditions/:tc',
+            controller:'editTermsConditionsCtrl',
+            templateUrl: 'templates/editTerms&Conditions.html',
+            params:{
+            termsConditions:null
+           }
         })
     .state('dashBoard.privacyPolicy', {
             url: '/privacyPolicy',
@@ -110,17 +111,15 @@ angular.module('fitnessApp', ['ui.router'])
     .state('dashBoard.editprivacyPolicy', {
             url: '/editprivacyPolicy',
             controller:'editprivacyPolicyCtrl',
-            templateUrl: 'templates/editprivacyPolicy.html'
+            templateUrl: 'templates/editprivacyPolicy.html',
+        params:{
+            policies:null
+           }
         })
     .state('dashBoard.aboutUs', {
             url: '/aboutUs',
             controller:'aboutUsCtrl',
             templateUrl: 'templates/aboutUs.html'
         })
-     .state('logOut', {
-            url: '/logOut',
-            controller:'logOutCtrl',
-            templateUrl: 'templates/logOut.html'
-        })
-
+  
 });

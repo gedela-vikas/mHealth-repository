@@ -1,6 +1,9 @@
 'use strict';
 
 var asyn=require("async");
+/*var crypto = require('crypto'),
+     algorithm = 'aes-256-ctr',
+    password = 'd6F3Efeq';*/
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
@@ -82,24 +85,29 @@ var FitnessSchema = new Schema({
     
   appointime: {
         type: String,
-        //  default: '',
-        //   required: 'Please fill Event name',
+        
         trim: true
                 },
     
     tittle: {
         type: String,
-        //default: '',
-        //required: 'Please fill Event name',
+       
         trim: true
             },
     
     description: {
         type: String,
-        //default: '',
-        //required: 'Please fill Event name',
+       
         trim: true
                  },
+    tc:{
+        type:String,
+        trim:true
+    },
+    pp:{
+        type:String,
+        trim:true
+    },
     
      panchdtn: {
       type: Date,
@@ -109,8 +117,30 @@ var FitnessSchema = new Schema({
 });
 
 var user = mongoose.model('Fitt', FitnessSchema);
+ 
+
+/*
+function encrypt(text){
+  var cipher = crypto.createCipher(algorithm,password)
+  var crypted = cipher.update(text,'utf8','hex')
+  crypted += cipher.final('hex');
+  return crypted;
+}
+ 
+function decrypt(text){
+  var decipher = crypto.createDecipher(algorithm,password)
+  var dec = decipher.update(text,'hex','utf8')
+  dec += decipher.final('utf8');
+  return dec;
+}
+*/
+ 
+ 
+ 
 
 module.exports = user;
+
+
 /*schema.set('collection', 'actor');*/
 
 function initDB(){
@@ -131,6 +161,8 @@ function initDB(){
               adminpsw: 'dddd',
               email:'deepakvts75@gmail.com'
             }
+        /*defaultUser.adminpsw = encrypt(defaultUser.adminpsw);*/
+       
         var Fitt = new user(defaultUser);
         Fitt.save(function(err,result){
             callback(null,{adminUser:defaultUser});

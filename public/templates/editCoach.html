@@ -1,0 +1,33 @@
+<center>
+    <h1>Edit Coach</h1>
+    <br>
+    
+    
+    <form name = "UpdateForm" ng-submit= "update()">
+  <p>
+     First Name: 
+      <input type="text" ng-model = "coachUpdate.firstname" name = "firstname" required>
+  </p>
+    
+  <p>Last Name: 
+    <input type="text" ng-model = "coachUpdate.lastname" name = "lastname" required>
+  </p>
+    
+  <p>
+     Email:
+      <input type="email" ng-model = "coachUpdate.email" name = "email" required>
+  </p>
+    
+  <p>
+      Contact:
+    <input type="text" ng-model = "coachUpdate.contact" name = "contact" required>
+  </p>
+    
+      <p>
+    Age
+      <input type="text" ng-model = "coachUpdate.age" name = "age" required>
+  </p>
+    
+    <button type="submit" value="Update" >Update</button>
+   
+</form></center>

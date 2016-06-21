@@ -12,8 +12,7 @@
     <th>Contact no</th>
     <th> Age</th>
     <th> Action</th>
-
-
+    
 	<tbody ng-repeat="alluserDetail in alluserDetails">
 		   <td>{{alluserDetail.serialno}}</td>
 			<td>{{alluserDetail.firstname}}</td>
@@ -23,7 +22,7 @@
             <td>{{alluserDetail.age}}</td>
 			<td>
                 
-    <button type="button" class="btn btn-info" ui-sref="^.editUser({alluserDetails:alluserDetail})">Edit</button></td>
+    <a type="button" ui-sref="^.editUser({alluserDetails:alluserDetail})">Edit</a></td>
             
 	
 	</tbody>

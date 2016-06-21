@@ -4,40 +4,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-<!--
-  <header class="main-header">
-
-    <a ui-sref="dashBoard.adminPanel" class="logo">
-     
-      <span class="logo-lg">DashBoard</span>
-    </a>
-
-    <nav class="navbar navbar-static-top">
-     
-        
-        
-        
-     
-        
-        
-        
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-       
-         
-         
-          
-        </ul>
-      </div>
-
-        </nav>
-  </header>
--->
-    
-    
-  <!-- Left side column. contains the logo and sidebar -->
-    
-    
+ <!-- Left side column. contains the logo and sidebar -->
     
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -67,10 +34,10 @@
          
         <li><a ui-sref="dashBoard.changePassword"><i class="fa fa-circle-o text-yellow"></i> <span>Change Password</span></a></li>
      <li><a ui-sref="dashBoard.terms&Conditions"><i class="fa fa-circle-o text-yellow"></i> <span>Terms & Conditions</span></a></li>
-      <li><a ui-sref="dashBoard.editTerms&Conditions"><i class="fa fa-circle-o text-yellow"></i> <span>Edit Terms & Conditions</span></a></li>   
+      <!--<li><a ui-sref="dashBoard.editTerms&Conditions"><i class="fa fa-circle-o text-yellow"></i> <span>Edit Terms & Conditions</span></a></li> -->  
         <li><a ui-sref="dashBoard.privacyPolicy"><i class="fa fa-circle-o text-yellow"></i> <span>Privacy Policy</span></a></li>
             <li><a ui-sref="dashBoard.aboutUs"><i class="fa fa-circle-o text-yellow"></i> <span>About us</span></a></li>
-            <li><a ui-sref="logOut"><i class="fa fa-circle-o text-yellow"></i> <span>LogOut</span></a></li>
+            <li><a ng-click="logout();"><i class="fa fa-circle-o text-yellow"></i> <span>LogOut</span></a></li>
           
       </ul>
         

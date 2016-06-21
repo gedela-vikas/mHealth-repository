@@ -26,11 +26,11 @@
 			<td>{{alluserDetail.contact}}</td>
             <td>{{alluserDetail.age}}</td>
 			<td>
-                <a type="button" class="btn btn-info" ng-href="#/dashBoard/viewCoach/{{alluserDetail._id}}">View</a>
-                
-            <!--    <button type="button" class="btn btn-info" ui-sref="^.editCoach({allDetail:allDetail})">Update</button>-->
-                
-                <button type="button" class="btn btn-info" ui-sref="^.deleteCoach({allDetail:allDetail})">Delete</button></td>
+                <a type="button" ng-href="#/dashBoard/viewCoach/{{alluserDetail._id}}">View</a>
+                 &nbsp;
+            <a type="button" ui-sref="^.editCoach({alluserDetails:alluserDetail})">Edit</a>
+                 &nbsp;
+                <a type="button" ng-click="coachdelete(alluserDetail._id)">DELETE</a></td>
             <td></td>
             
 		</tr>

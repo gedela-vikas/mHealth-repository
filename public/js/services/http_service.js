@@ -3,34 +3,47 @@ angular.module('fitnessApp')
     this.logID = {};
 })
 
+
 .service('loginService', function ($http, $q, services) {
-
     this.user = function (params) {
-
         var deferred = $q.defer();
         $http.post('api/login', params)
 
         .then(function (objS) {
-            deferred.resolve(objS);
-            alert('server succesfull');
-            console.log("Data in Params--->" + JSON.stringify(objS));
-            services.logID = objS;
-            console.log("hhjkhkk----"+JSON.stringify(services));
-            
-        }, function (objE) {
-            deferred.reject("server Error");
+
+            if(objS.status != "404")
+            {
+                 localStorage.serverToken=objS.headers('token');
+                    deferred.resolve(objS);
+                alert('server succesfull');
+                  services.logID = objS;
+            }
+            else{
+                deferred.reject("server Error");
+        
+            }
+           
+            }, function (objE) {
+          console.log(objE)
         });
         return deferred.promise;
     }
+ 
 })
 
 
-.service('forgotService', function ($http, $q) {
+.service('logoutService',function($state,$window, services){
+      this.logout=function(){
+        $window.localStorage.clear();
+        $state.go('login');
+    }
+  })
+
+.service('forgotService', function ($http, $q, services) {
     this.user = function (params) {
 
         var deferred = $q.defer();
         $http.post('api/forgotPass', params)
-
         .then(function (objS) {
             deferred.resolve(objS);
             alert('server succesfull');
@@ -43,7 +56,7 @@ angular.module('fitnessApp')
 
         .then(function (objS) {
             deferred.resolve(objS);
-            alert('server succesfull');
+            alert('email sent succesfull');
         }, function (objE) {
             deferred.reject("server Error");
         });
@@ -71,7 +84,7 @@ angular.module('fitnessApp')
      this.alluserDetails = function(ID) {
 
     		var deff = $q.defer();
-  			$http.get('api/userDetail/'+ID)
+    $http.get('api/userDetail/'+ID)
     		.then(function(success){
         		deff.resolve(success);
     		},function(error){
@@ -96,5 +109,68 @@ angular.module('fitnessApp')
         return deff.promise;
     }
 })
+
+.service('tcService',function($q, $http,services){
+    console.log("tc");
+    this.data=null;
+     this.termsConditions = function(usertype) {
+         var deff = $q.defer();
+  			$http.get('api/tc/'+usertype)
+    		.then(function(success){
+        		deff.resolve(success);
+              data=JSON.stringify(success);
+                console.log("service access -----"+data);
+    		},function(error){
+        		console.log(error);
+    		});
+         
+  			return deff.promise;
+  		}	
+    })
+
+
+.service('ppService',function($q, $http,services){
+    console.log("tc");
+    this.data=null;
+     this.policies = function(usertype) {
+         var deff = $q.defer();
+  			$http.get('api/pp/'+usertype)
+    		.then(function(success){
+        		deff.resolve(success);
+              data=JSON.stringify(success);
+                console.log("service access -----"+data);
+    		},function(error){
+        		console.log(error);
+    		});
+         
+  			return deff.promise;
+  		}	
+    })
+
+.factory('httpModifier',function($location){
+      return{
+          request:function(config){
+              config.headers.servertoken=localStorage.serverToken;
+              return config;
+          },
+          requestError:function(config){
+              return config;
+          },
+          response:function(config){
+              return config;
+          },
+          responseError:function(config){
+              if(config.status==403)
+                  $location.path('login')
+                  
+                  return config;
+          }
+      }
+  })
+
+
+
+
+
 
 
