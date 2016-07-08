@@ -12,7 +12,11 @@ var authUser = require('./authUser');
 
 //,authUser.authUser
 router.post('/save', appointment.appointmentsave);
+router.post('/appointdelete',appointment.delete);
+/*router.post('/editAppointment',appointment.editAppointment);*/
+
 
 router.get('/find', appointment.findall);
+router.get('/appointDetail/:id',appointment.findByOne);
 
 module.exports=router

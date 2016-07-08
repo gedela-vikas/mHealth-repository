@@ -1,0 +1,31 @@
+<center>
+    <h1>Edit Appointment</h1>
+    <br>
+    
+    
+    <form name = "UpdateForm" ng-submit= "update()">
+  <p>
+     Username: 
+      <input type="text" ng-model = "appointUpdate.user.firstname" name = "firstname" required>
+  </p>
+    
+  <p>Coachname: 
+    <input type="text" ng-model = "appointUpdate.coach.firstname" name = "lastname" required>
+  </p>
+    
+  <p>
+    Appointment Timing :
+      <input type="date" ng-model = "appointUpdate.date" name = "" required>
+       <input type="time" ng-model = "appointUpdate.time" name = "" required>
+  </p>
+    
+  <p>
+      Appointment Detail:
+    <input type="text" ng-model = "appointUpdate.apointdetail" name = "contact" required>
+  </p>
+    
+      
+    
+    <button type="submit" value="Update" >Update</button>
+   
+</form></center>

@@ -17,3 +17,9 @@ var AppointmentSchema = new Schema({
 var apoin = mongoose.model('Appoint', AppointmentSchema);
 
 module.exports = apoin;
+
+
+
+
+
+

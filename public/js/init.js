@@ -10,6 +10,19 @@ angular.module('fitnessApp', ['ui.router'])
             controller:'loginCtrl',
             templateUrl: 'templates/login.html'
         })
+    .state('dashBoard.editPerson', {
+            url: '/editPerson',
+            controller:'editPersonCtrl',
+            templateUrl: 'templates/editPerson.html',
+            params:{
+                personDetails:null
+            }
+        })
+    .state('dashBoard.surveys', {
+            url: '/surveys/:userID',
+            controller:'surveysCtrl',
+            templateUrl: 'templates/surveys.html'
+        })
     .state('dashBoard.adminPanel', {
             url: '/adminPanel',
             controller:'adminPanelCtrl',
@@ -70,22 +83,25 @@ angular.module('fitnessApp', ['ui.router'])
             controller:'appointmentCtrl',
             templateUrl: 'templates/appointment.html'
         })
+     .state('dashBoard.createAppointment', {
+            url: '/createAppointment',
+            controller:'createAppointmentCtrl',
+            templateUrl: 'templates/createAppointment.html'
+        })
       .state('dashBoard.viewAppointment', {
-            url: '/viewAppointment',
+            url: '/viewAppointment/:id',
             controller:'viewAppointmentCtrl',
             templateUrl: 'templates/viewAppointment.html'
         })
      .state('dashBoard.editAppointment', {
-            url: '/editAppointment',
+            url: '/editAppointment/:id',
           controller:'editAppointmentCtrl',
-            templateUrl: 'templates/editAppointment.html'
+            templateUrl: 'templates/editAppointment.html',
+         params:{
+        appointments:null
+      }
         })
-     .state('dashBoard.deleteAppointment', {
-            url: '/deleteAppointment',
-            controller:'deleteAppointmentCtrl',
-            templateUrl: 'templates/deleteAppointment.html'
-        })
-     .state('dashBoard.changePassword', {
+         .state('dashBoard.changePassword', {
             url: '/changePassword',
             controller:'changePasswordCtrl',
             templateUrl: 'templates/changePassword.html'

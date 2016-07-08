@@ -3,7 +3,7 @@ angular.module('fitnessApp')
     $scope.search={};
    
       fetchService.alluserDetails("USER").then(function(success){
-      console.log(success);
+     /* console.log(success);*/
       $scope.alluserDetails = success.data;
     },function(error){
       console.log(error);
@@ -11,7 +11,7 @@ angular.module('fitnessApp')
     
      $scope.userdelete=function(_id){
        /*  console.log("id in ctrk"+_id);*/
-     alert("Do you wan to Delete This Client?");
+     alert("Do you wan to Delete This User?");
       if (confirm("Delete?") == true) {
       /*  console.log("aaa---->>"+_id);*/
         $http.post('api/delete', {

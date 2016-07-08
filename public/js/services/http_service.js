@@ -80,7 +80,7 @@ angular.module('fitnessApp')
     })
 
 .service('userdetailService',function($q, $http,services){
-             console.log("logID--------"+JSON.stringify(services));
+/*             console.log("logID--------"+JSON.stringify(services));*/
      this.alluserDetails = function(ID) {
 
     		var deff = $q.defer();
@@ -167,6 +167,21 @@ angular.module('fitnessApp')
           }
       }
   })
+
+.service('appointService',function($q, $http,services){
+       this.appointments = function(ID) {
+    		var deff = $q.defer();
+    $http.get('/appointment/appointDetail/'+ID)
+    		.then(function(success){
+        		deff.resolve(success);
+    		},function(error){
+        		console.log(error);
+    		});
+  			return deff.promise;
+  		}	
+    })
+
+
 
 
 

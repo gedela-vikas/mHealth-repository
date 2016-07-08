@@ -11,7 +11,7 @@ angular.module('fitnessApp')
 
     $scope.coachdelete=function(_id){
         /* console.log("id in ctrk"+_id);*/
-     alert("Do you wan to Delete This Client?");
+     alert("Do you wan to Delete This Coach?");
       if (confirm("Delete?") == true) {
        /* console.log("aaa---->>"+_id);*/
         $http.post('api/delete', {

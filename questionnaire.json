@@ -1,0 +1,342 @@
+[
+	{
+		"QNo":"LD1",
+		"Q":"Community ID"
+	},
+	{
+		"QNo":"LD2",
+		"Q":"Village ID"
+	},
+	{
+		"QNo":"LD3",
+		"Q":"Date of completion of this questionnaire"
+	},
+	{
+		"QNo":"LD4",
+		"Q":"Start time for the Interview"
+	},
+	{
+		"QNo":"LD5",
+		"Q":"End time for the interview"
+	},
+	{
+		"QNo":"CN1",
+		"Q":"Unique Participant ID"
+	},
+	{
+		"QNo":"CN2",
+		"Q":"Informed Consent has been administered and consent was obtained from the participant."
+	},
+	{
+		"QNo":"CN3",
+		"Q":"Informed Consent has been administered and consent was obtained from the participant."
+	},
+	{
+		"QNo":"CN4",
+		"Q":"Aadhar Card Note. Ask participant if he/she has an Aadhar card and for permission to see it to note the demographic information in CN5 – CN10."
+	},
+	{
+		"QNo":"CN5",
+		"Q":"Family Surname"
+	},
+	{
+		"QNo":"CN6",
+		"Q":"First Name"
+	},
+	{
+		"QNo":"CN7",
+		"Q":"Address/House Number"
+	},
+	{
+		"QNo":"CN8",
+		"Q":"Contact Phone Number"
+	},
+	{
+		"QNo":"CN9",
+		"Q":"Sex (Record Male/Female as observed)"
+	},
+	{
+		"QNo":"CN10",
+		"Q":"What is your date of birth?"
+	},
+	{
+		"QNo":"CN11",
+		"Q":"How old are you?"
+	},
+	{
+		"QNo":"IDRS_AGE",
+		"Q":"IDRS Score Calculation for Age: Categorize age and assign points."
+	},
+	{
+		"QNo":"DEM1",
+		"Q":"What is your religion?"
+	},
+	{
+		"QNo":"DEM2",
+		"Q":"What is your Marital Status?"
+	},
+	{
+		"QNo":"DEM3",
+		"Q":"In the last 12 months, which describes your main work status?"
+	},
+	{
+		"QNo":"DEM4",
+		"Q":"What is the main area of your most recent active work?"
+	},
+	{
+		"QNo":"OCC",
+		"Q":"Occupation Categories for DEM4 (CODE: OCC<#>)"
+	},
+	{
+		"QNo":"DEM5",
+		"Q":"How many people older than 18 years including yourself, live in your household?"
+	},
+	{
+		"QNo":"DEM6",
+		"Q":"What describes the best estimate of your household income in the last month?"
+	},
+	{
+		"QNo":"DEM7",
+		"Q":"What statement best describes your household financial condition for health care and medicines?"
+	},
+	{
+		"QNo":"DEM8",
+		"Q":"Please take a look at this list and tell me which of these items do you have at home? (It could be owned by you, your family, or provided by your employer, or it could be available in your home; but it should be for the use of just you or your family). Do you have a …<read item from list> which is in working condition? Check all that apply."
+	},
+	{
+		"QNo":"DEM9",
+		"Q":"Does your family own any agricultural land, by agricultural land I mean land that is currently under cultivation or plantation?"
+	},
+	{
+		"QNo":"DEM10",
+		"Q":"Could you tell me something about the person who makes the biggest contribution to the running of the household. To what level has he/she studied?"
+	},
+	{
+		"QNo":"DEM11",
+		"Q":"SEC Classification:"
+	},
+	{
+		"QNo":"DEM12",
+		"Q":"Do you have access to a mobile phone for your use?"
+	},
+	{
+		"QNo":"DEM13",
+		"Q":"If DEM12=Yes  What features do you have on your mobile phone/plan?"
+	},
+	{
+		"QNo":"DEM14",
+		"Q":"If DEM12 = Yes  How do you use your mobile phone?"
+	},
+	{
+		"QNo":"O2",
+		"Q":"The grid"
+	},
+	{
+		"QNo":"DAH1",
+		"Q":"Are you aware of or have you ever heard of an illness called Diabetes?"
+	},
+	{
+		"QNo":"DAH2",
+		"Q":"Have you ever had your blood sugar measured by a doctor or another health worker?"
+	},
+	{
+		"QNo":"DAH3",
+		"Q":"If YES to DAH2  Have you ever been told by a doctor or other health worker that you have high blood sugar or diabetes?"
+	},
+	{
+		"QNo":"DAH4",
+		"Q":"When were you told you have a high blood sugar?"
+	},
+	{
+		"QNo":"DAH5",
+		"Q":"IF YES to DAH3  In the past two weeks, have you taken any medication to lower your blood sugar?"
+	},
+	{
+		"QNo":"DAH6",
+		"Q":"IF YES to DAH3  In the last 12 months, have you gone to any health care provider to care for diabetes or high blood sugar?"
+	},
+	{
+		"QNo":"IDR0.",
+		"Q":"Interviewer: I am now going to ask you a few questions related to your family’s history of diabetes."
+	},
+	{
+		"QNo":"IDR1",
+		"Q":"Is any member of your family diagnosed with diabetes?"
+	},
+	{
+		"QNo":"IDR2",
+		"Q":"IF YES to IDR1  Which of your parents has /had diabetes?"
+	},
+	{
+		"QNo":"IDRS_FH",
+		"Q":"IDRS CODE and SCORE (Family History): Neither parent…0 points"
+	},
+	{
+		"QNo":"IDR3",
+		"Q":"Do you have any other relatives who have/had diabetes?"
+	},
+	{
+		"QNo":"IDR4",
+		"Q":"Which relative(s) have/had diabetes?"
+	},
+	{
+		"QNo":"IDR5",
+		"Q":"Do any of these relatives live with you in your household?"
+	},
+	{
+		"QNo":"IDR6",
+		"Q":"How would you describe your level of physical activity in a typical day."
+	},
+	{
+		"QNo":"IDR7",
+		"Q":"How would you describe your level of physical activity in your daily work?"
+	},
+	{
+		"QNo":"IDR8",
+		"Q":"How would you describe your level of physical activity in activities outside of your daily work? Such as if you do exercise or non-work related activity. "
+	},
+	{
+		"QNo":"IDRS_PHYSACT",
+		"Q":"IDRS SCORE (Physical Activity):"
+	},
+	{
+		"QNo":"GDR1",
+		"Q":"Do you have any Children who were born  with a weight >4KG?"
+	},
+	{
+		"QNo":"RRA1",
+		"Q":"Have you ever had your blood pressure measured by a doctor or other health worker?"
+	},
+	{
+		"QNo":"RRA2",
+		"Q":"Have you ever been told by a health worker or doctor that you have elevated blood pressure or hypertension?"
+	},
+	{
+		"QNo":"RRA3",
+		"Q":"Have you been told in the last 12 months?"
+	},
+	{
+		"QNo":"RRA4",
+		"Q":"In the past 2 weeks, have you taken any medication for high blood pressure?"
+	},
+	{
+		"QNo":"RRA5",
+		"Q":"Have you ever had your blood cholesterol (fat level in your blood) measured by a health worker?"
+	},
+	{
+		"QNo":"RRA6",
+		"Q":"Have you ever been told by a health worker or doctor that you have an elevated blood cholesterol?"
+	},
+	{
+		"QNo":"RRA7",
+		"Q":"Have you been told in the last 12 months?"
+	},
+	{
+		"QNo":"RRA8",
+		"Q":"In the past 2 weeks, have you taken any medication for high blood cholesterol?"
+	},
+	{
+		"QNo":"RRA9",
+		"Q":"Have you ever been told by a health worker or doctor that you have any disease of the heart or blood vessels such as a heart attack, stroke, or angina?"
+	},
+	{
+		"QNo":"RRA10a",
+		"Q":"Have you lost any or all of your natural teeth?"
+	},
+	{
+		"QNo":"RRA10b",
+		"Q":"During the last 12 months, have you had any problems or concerns about your mouth or teeth?"
+	},
+	{
+		"QNo":"RRA10c",
+		"Q":"Have you received any evaluation or treatment from a dentist or other oral health specialist during the last 12 months?"
+	},
+	{
+		"QNo":"RRA11",
+		"Q":"Do you currently use any tobacco product, whether by smoking or smokeless/chewing?"
+	},
+	{
+		"QNo":"RRA12",
+		"Q":"If RRA11=1  Have you ever tried to quit smoking or using tobacco related products?"
+	},
+	{
+		"QNo":"RRA13",
+		"Q":"In the last 12 months, have you seen any health provider for any of these conditions (blood pressure, high cholesterol, cardiovascular disease, oral health/disease, stopping tobacco use)"
+	},
+	{
+		"QNo":"HA1",
+		"Q":"Quit using tobacco or do not start"
+	},
+	{
+		"QNo":"HA2",
+		"Q":"Reduce salt in your diet"
+	},
+	{
+		"QNo":"HA3",
+		"Q":"Eat more fruits/vegetables each day"
+	},
+	{
+		"QNo":"HA4",
+		"Q":"Reduce fat in your diet"
+	},
+	{
+		"QNo":"HA5",
+		"Q":"Start or do more physical activity"
+	},
+	{
+		"QNo":"HA6",
+		"Q":"Maintain a healthy body weight or lose weight"
+	},
+	{
+		"QNo":"PM1",
+		"Q":"Waist circumference"
+	},
+	{
+		"QNo":"IDRS_WC",
+		"Q":"IDRS Score for Waist Circumference."
+	},
+	{
+		"QNo":"IDRS_FINAL",
+		"Q":"IDRS_FINAL = (IDRS_WC) + (IDRS_AGE) + (IDRS_PHYSACT)+ (IDRS_FH)"
+	},
+	{
+		"QNo":"HAS1",
+		"Q":"Advising Start Time"
+	},
+	{
+		"QNo":"HAS2",
+		"Q":"Advising End Time: Cue after all SHEM messages and advising is delivered."
+	},
+	{
+		"QNo":"MHA1",
+		"Q":"If you were to be interviewed again, would you prefer that the interviewer use a mobile phone/tablet or survey with pen/paper?"
+	},
+	{
+		"QNo":"MHA2",
+		"Q":"Why do you prefer"
+	},
+	{
+		"QNo":"MHA3",
+		"Q":"If you were to receive health services about diabetes on your mobile phone, what kind of services would you prefer?"
+	},
+	{
+		"QNo":"MHA4",
+		"Q":"If you were to receive health services on your mobile phone, how would you prefer to receive them?"
+	},
+	{
+		"QNo":"HAS3",
+		"Q":"I asked the participant if he understood the advice I gave him/her."
+	},
+	{
+		"QNo":"HAS4",
+		"Q":"I asked the participant to repeat or tell me what advice I gave him/her."
+	},
+	{
+		"QNo":"HAS5",
+		"Q":"The participant asked me questions about the health advice I gave him/her."
+	},
+	{
+		"QNo":"HAS6",
+		"Q":"I am confident the participant understands the advice I gave him/her."
+	}
+]

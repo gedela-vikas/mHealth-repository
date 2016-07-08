@@ -19,7 +19,7 @@
 
 	<tbody>
 	<tr ng-repeat = "alluserDetail in alluserDetails | filter:{firstname:search.keyword}" >
-            <td>{{alluserDetail.serialno}}</td>
+            <td>{{$index+1}}</td>
 			<td>{{alluserDetail.firstname}}</td>
             <td>{{alluserDetail.lastname}}</td>
             <td>{{alluserDetail.email}}</td>

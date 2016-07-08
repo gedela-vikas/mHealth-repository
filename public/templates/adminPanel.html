@@ -1,3 +1,61 @@
+<div class="aa">
+<div class="ultable">
+<table style="width:100%" border="1" color:#fff; border-collapse:collapse>
+  <thead>
+    <th>Sl. No.</th>
+    <th>Salutation</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>User Name</th>
+    <th>Email Address</th>
+    <th>Status</th>
+    <th>Edit</th>
+  </thead> 
+  <tbody>
+    <tr ng-repeat = "person in people | orderBy:'firstName'">
+      <td>{{$index+1}}</td>
+      <td>{{person.salutation}}</td>
+      <td>{{person.firstName}}</td>
+      <td>{{person.lastName}}</td>
+      <td>{{person.userName}}</td>
+      <td>{{person.eMail}}</td>
+      <td><button type="button" ng-click="changeStatus(person)">{{(person.status)?"active":"inactive"}}</button></td>
+      <td><button type="button" ui-sref="dashBoard.editPerson({personDetails:person})">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--
 <style>
 .ad {

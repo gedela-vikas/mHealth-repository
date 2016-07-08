@@ -10,7 +10,9 @@ var config = require.main.require('./config');
 
 
 
-mongoose.connect('mongodb://localhost/fitness');
+
+mongoose.connect('mongodb://localhost/mHealth');
+//mongoose.connect('mongodb://localhost/fitness');
 
 module.exports.login = function (req, res) {
 
@@ -41,7 +43,7 @@ module.exports.login = function (req, res) {
         }).send({
             serverStatus: 0,
             msg: "login successfully",
-           
+            administrator:user
         });
         /*console.log("what is in token-->>>" + token);*/
      
@@ -68,8 +70,9 @@ module.exports.forgotPass = function (req, res) {
             return res.status(404).send();
         }
         res.send({
-            msg: "change your password",
-            user
+            msg: "change your password"
+            // msg: "change your password",
+            // user
         });
     });
 

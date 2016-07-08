@@ -1,0 +1,23 @@
+<p>Select Surveyer</p>
+<select ng-model="selectedPerson" ng-options="person.eMail for person in people" ng-click="surveyList()"></select>
+<p>Select Survey ID</p>
+<select ng-model="selectedSurvey" ng-options="survey._id for survey in surveys"></select>
+<button type="button" ng-click="questionList()">List</button>
+<div class="ultable">
+<table style="width:100%" border="1" color:#fff; border-collapse:collapse>
+  <thead>
+    <th>Q. No.</th>
+    <th>Question</th>
+    <th>Response</th>
+    <th>Edit</th>
+  </thead> 
+  <tbody>
+    <tr ng-repeat = "question in questions | orderBy:'QNo'">
+      <td>{{question.QNo}}</td>
+      <td>{{question.Q}}</td>
+      <td>{{answer[question.QNo]}}</td>
+      <td><button type="button" ng-click="edit(question.QNo,question.Q,answer[question.QNo],answer._id)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,6 +1,6 @@
 var jwt = require('jsonwebtoken');
 var config = require.main.require('./config');
-module.exports.authUser = function (req, res, next) {
+module.exports.token = function (req, res, next) {
   var token =req.headers.servertoken;
   if (token) {
 

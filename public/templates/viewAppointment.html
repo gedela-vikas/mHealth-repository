@@ -1,0 +1,27 @@
+<div class="aa">
+<center>
+<h1>View Appointment</h1></center>
+ 
+<div class="ultable">
+<table style="width:100%" border="1" color:#fff; border-collapse:collapse>
+
+    <th>S. No</th>
+    <th>Username</th>
+    <th>Coachname</th>
+    <th>Appointment Timing</th>
+    <th>Appointment Detail</th>
+    <th> Action</th>
+    
+	<tbody ng-repeat="appointment in appointments">
+		   <td>{{$index+1}}</td>
+			<td>{{appointment.user.firstname}}</td>
+            <td>{{appointment.coach.firstname}}</td>
+             <td>{{appointment.startAt | date :'dd/mm/yyyy hh:mm'}}-{{appointment.endAt| date :'dd/mm/yyyy hh:mm'}}</td>
+        <td>{{appointment.apointdetail}}</td>
+			<td>
+    <a type="button" ui-sref="^.editAppointment({appointments:appointment})">Edit</a></td>
+            
+	
+	</tbody>
+</table></div>
+</div

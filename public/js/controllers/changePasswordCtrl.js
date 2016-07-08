@@ -4,27 +4,20 @@ angular.module('fitnessApp')
      $scope.myForm={};
  
     $scope.submit=function(){
-    
-    if($scope.myForm.oldP == services.logID.data.user.adminpsw)
+    if($scope.myForm.oldP == services.logID.data.administrator.adminpsw)
         {
         alert("Successfully Changed");    
           $http.post('api/change', {
-         _id: services.logID.data.user._id,
+         _id: services.logID.data.administrator._id,
          newpwd: $scope.myForm.newpwd,
               
       })
       .then(function(success){
-              $state.go('dashBoard')
-              
-     
+              $state.go('login')
       })
         }
         else{
-            
             alert("unmatched");
         }
-    
     }
-    
-    
 });

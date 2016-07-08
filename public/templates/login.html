@@ -1,7 +1,6 @@
 <div class="content-wrapper" style="margin-left:0px">
     <!-- Content Header (Page header) -->
-   <form myApp="fitnessApp"  novalidate>
-    <section class="content-header">
+       <section class="content-header">
       <h1 class="customHeader">
         Login Page
       </h1>
@@ -9,22 +8,22 @@
 
 <section class="content cls-login-form">
       
-      <form name="loginform" class="">
+      <form name="loginform" class="" novalidate>
   <fieldset class="form-group ">
     <label for="formGroupExampleInput">User Name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" name="name"  ng-model="myForm.username" placeholder="Enter Username" required>
-     <span style="color:red" ng-show="loginform.username.$dirty && loginform.username.$invalid">
-     <span ng-show="loginform.username.$error.required">Username is required.</span>
-</span>
-
-      
-  </fieldset>
+    <input type="text" class="form-control" id="formGroupExampleInput" name="username"  ng-model="myForm.username" placeholder="Enter Username" required >
+    <span style="color:red" ng-show="loginform.username.$dirty && loginform.username.$invalid">
+    <span ng-show="loginform.username.$error.required">Username is required.</span>
+    </span>
+    </fieldset> 
+          
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">Password</label>
-    <input type="password" class="form-control" id="formGroupExampleInput2" name="psw" ng-model="myForm.adminpsw" placeholder="Enter password" required>
-      <span style="color:red" ng-show="loginform.adminpsw.$dirty && loginform.adminpsw.$invalid">
-     <span ng-show="loginform.adminpsw.$error.required">Password is required.</span>
-</span>
+    <input type="password" class="form-control" id="formGroupExampleInput2" name="psw" ng-model="myForm.adminpsw" placeholder="Enter password">
+      <span style="color:red" ng-show="loginform.psw.$dirty && loginform.psw.$invalid">
+    <span ng-show="loginform.psw.$error.required">Password is required.</span>
+    </span>
+     
   </fieldset>
           <fieldset class="form-group">
                <input type="checkbox"   >
@@ -32,15 +31,14 @@
           </fieldset>
 
           
-          <button type="submit" class="btn btn-primary" ng-click="login()" ng-disabled="loginform.username.$dirty && loginform.username.$invalid ||
-loginform.adminpsw.$dirty && loginform.adminpsw.$invalid">Login</button>
+          <button type="submit" class="btn btn-primary" ng-click="login()" ng-disabled="loginform.$invalid">Login</button>
       
        <fieldset class="form-group ">
            <a ui-sref="forgotPassword">forgot Your Password?</a></fieldset>
 
 </form>
     </section>
-</form>
+
   </div>
 
 

@@ -13,7 +13,7 @@ angular.module('fitnessApp')
             $state.go("dashBoard");
         }, function (ObjE) {
             alert('sorry your username or password is incorect...!');
-            console.log("Error : " + JSON.stringify(ObjE));
+           /* console.log("Error : " + JSON.stringify(ObjE));*/
 
         })
 }

@@ -1,19 +1,34 @@
-
 <center>
 <h1> Appointment List</h1></center>
+<center>
+   <a type="button" class="btn btn-info" ng-href="#/dashBoard/createAppointment">Create Appointment</a> 
+</center>
 <div class="ulsearch">
-<input type ="text" placeholder="Search via users" style="width:75%">
+<!--<input type ="text" placeholder="Search via users" style="width:75%">-->
 </div>
 <div class="ultable">
 <table style="width:100%" border="1" color:#fff; border-collapse:collapse>
 
-    <th>S. No</th>
-    <th>Username</th>
-    <th>Coachname</th>
-    <th>Appointment Timing </th>
-    <th>Appointment Detail</th>
-    <th> Action</th>
-
-
-
-</table></div>
+    <th>Sno</th>
+  <th>Username</th>
+  <th>Coachname</th>
+  <th>Appointment Timing</th>
+    <th> Detail</th>
+   <th>Action</th>
+  
+  
+  <tbody>
+    <tr ng-repeat="appointment in appointments" >
+      <td>{{$index+1}}</td>
+      <td>{{appointment.user.firstname}} {{appointment.user.lastname}}</td>
+			<td>{{appointment.coach.firstname}} {{appointment.coach.lastname}}</td>
+      <td>{{appointment.startAt | date :'dd/mm/yyyy hh:mm'}}-{{appointment.endAt| date :'dd/mm/yyyy hh:mm'}}</td>
+      <td>{{appointment.apointdetail}}</td><td>
+			 <a type="button" ng-href="#/dashBoard/viewAppointment/{{appointment._id}}">View</a>
+                &nbsp;
+          <a type="button" ui-sref="^.editAppointment({appointments:appointment})">Edit</a>
+                &nbsp;
+        <a type="button" ng-click="appointmentdelete(appointment._id)">DELETE</a></td>
+      </tr></tbody></table></div>
+  
+ 

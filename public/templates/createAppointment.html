@@ -1,0 +1,41 @@
+<center>
+    <h1>Create Appointment</h1>
+    <br>
+    
+    
+    <form name ="CreateForm" >
+  <p>
+    User:
+    <select ng-model="selected.User" ng-options="user.firstname for user in users"></select>
+  </p>
+    
+  <p>
+    Coach:
+    <select ng-model="selected.Coach" ng-options="coach.firstname for coach in coaches"></select>
+<!--    <select ng-model="appointmentDetail.coach"><option value="" ng-repeat="coach in coaches">{{coach.firstname}} {{coach.lastname}}</option></select>-->
+  </p>
+    
+  <p>
+     Appointment Title:
+      <input type="text" ng-model = "appointmentDetail.apointtitle" name = "apptitle" required>
+  </p>
+    
+  <p>
+      Appointment Description:
+    <input type="text" ng-model = "appointmentDetail.apointdetail" name = "appointdes" required>
+  </p>
+      <p>
+    Start At:
+      <input type="date" ng-model = "appointmentDetail.date" name = "date" required>
+      <input type="time" ng-model = "appointmentDetail.time" name = "time" required> 
+  </p>
+<!--
+    <p>
+    Duration:
+      <input type="text" ng-model="appointmentDetail.num" name="num" required>
+    
+  </p>
+-->
+    <button type="submit" value="Save" ng-disabled="CreateForm.$invalid" ng-click="create();" >Save</button>
+   
+</form></center>
