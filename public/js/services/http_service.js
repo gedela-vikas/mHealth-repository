@@ -45,24 +45,18 @@ angular.module('fitnessApp')
         var deferred = $q.defer();
         $http.post('api/forgotPass', params)
         .then(function (objS) {
-            deferred.resolve(objS);
-            alert('server succesfull');
-            console.log("Data in Params--->" + JSON.stringify(params));
+            if(objS.status != "404")
+            {
+	            deferred.resolve(objS);
+            }
+            else{
+                deferred.reject("server Error");
+            }        
         }, function (objE) {
-            deferred.reject("server Error");
-        });
-
-        $http.post('api/sendEmail', params)
-
-        .then(function (objS) {
-            deferred.resolve(objS);
-            alert('email sent succesfull');
-        }, function (objE) {
-            deferred.reject("server Error");
+//            deferred.reject("server Error");
         });
         return deferred.promise;
     }
-
 })
 .service('fetchService',function($q, $http,services){
     

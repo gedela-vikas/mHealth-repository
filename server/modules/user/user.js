@@ -7,7 +7,7 @@ var Apoin = require.main.require("./server/modules/admin/appointment");
 var nodemailer = require('nodemailer');
 var jwt = require('jsonwebtoken');
 var config = require.main.require('./config');
-
+var transporter = nodemailer.createTransport();
 
 
 
@@ -69,6 +69,13 @@ module.exports.forgotPass = function (req, res) {
             console.log('sorry Your id does not exists');
             return res.status(404).send();
         }
+        var random = Math.random().toString(36).slice(-8);
+        transporter.sendMail({
+					from: 'mHealth@email.com',
+					to: emails,
+					subject: 'mHealth',
+					text: 'Your mHealth password is changed to ' + random
+				});
         res.send({
             msg: "change your password"
             // msg: "change your password",

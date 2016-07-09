@@ -102,7 +102,7 @@ function initDB(){
         var defaultUser={
               username: 'deepak',
               adminpsw: 'dddd',
-              email:'deepakvts75@gmail.com'
+              email:'vikasgedela@gmail.com'
             }
         /*defaultUser.adminpsw = encrypt(defaultUser.adminpsw);*/
        
